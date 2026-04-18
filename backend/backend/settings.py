@@ -4,9 +4,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 import os
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = os.environ.get("SECRET_KEY", "dev_fallback")
 
-DEBUG = os.environ.get("DEBUG", False)
+# O Render injeta por padrão a variável 'RENDER'. Se ela existir, estamos em produção (DEBUG = False).
+# Se não existir, estamos no seu PC local (DEBUG = True).
+DEBUG = "RENDER" not in os.environ
 
 ALLOWED_HOSTS = ["*"]
 
