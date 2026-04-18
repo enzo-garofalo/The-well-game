@@ -172,7 +172,7 @@ export default function App() {
       {/* Header bar */}
       <header className="game-header">
         <div className="header-left">
-          <span className="game-brand">🪣 The Well Game</span>
+          <span className="game-brand">The Well Game</span>
           <span className="room-code-badge mono">{roomCode}</span>
         </div>
         <div className="header-right">

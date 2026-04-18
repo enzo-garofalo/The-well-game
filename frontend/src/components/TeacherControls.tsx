@@ -13,14 +13,14 @@ export default function TeacherControls({ roundActive, onDrawCard, onEndGame }: 
         disabled={roundActive}
         onClick={onDrawCard}
       >
-        🃏 Draw Card
+        Draw Card
       </button>
       <button
         id="btn-end-game"
         className="btn btn-danger"
         onClick={onEndGame}
       >
-        🔴 End Game
+        End Game
       </button>
 
       <style>{`
